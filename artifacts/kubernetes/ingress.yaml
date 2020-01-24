@@ -7,23 +7,23 @@ spec:
   rules:
   - http:
       paths:
-      - path: /
+      - path: /*
         backend:
           serviceName: dashboard-service
           servicePort: 9001
-      - path: /dashboard
+      - path: /dashboard/*
         backend:
           serviceName: dashboard-service
           servicePort: 9001
-      - path: /customer
+      - path: /customer/*
         backend:
           serviceName: customer-service
           servicePort: 9002
-      - path: /market
+      - path: /market/*
         backend:
           serviceName: market-service
           servicePort: 9003
-      - path: /integration
+      - path: /integration/*
         backend:
           serviceName: integration-service
           servicePort: 9004
