@@ -1,0 +1,29 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: poc-microservices-ingress
+  namespace: poc-microservices-system
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: dashboard-service
+          servicePort: 9001
+      - path: /dashboard
+        backend:
+          serviceName: dashboard-service
+          servicePort: 9001
+      - path: /customer
+        backend:
+          serviceName: customer-service
+          servicePort: 9002
+      - path: /market
+        backend:
+          serviceName: market-service
+          servicePort: 9003
+      - path: /integration
+        backend:
+          serviceName: integration-service
+          servicePort: 9004

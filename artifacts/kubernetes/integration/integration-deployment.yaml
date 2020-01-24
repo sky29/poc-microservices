@@ -1,0 +1,17 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: integration-deployment
+  namespace: poc-microservices-system
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: integration
+    spec:
+      containers:
+      - name: integration
+        image: akashdocker29/integration:0.0.1-SNAPSHOT
+        ports:
+        - containerPort: 9004
