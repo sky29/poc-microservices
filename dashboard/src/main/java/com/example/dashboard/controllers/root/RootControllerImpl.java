@@ -14,6 +14,5 @@ public class RootControllerImpl implements RootController {
     public String showMessage() {
         return rootService.showMessage();
     }
-
     
 }
